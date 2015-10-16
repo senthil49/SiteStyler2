@@ -1,0 +1,35 @@
+﻿<controls:MetroWindow x:Class="SiteStyler2.Views.ShellView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+      xmlns:regions="http://www.codeplex.com/CompositeWPF"
+	  Title="SiteStyler-2" 
+      Height="600" 
+      Width="400"
+      TitlebarHeight="30"
+      WindowMinButtonStyle="{StaticResource MetroWindowButtonStyle}"
+      WindowMaxButtonStyle="{StaticResource MetroWindowButtonStyle}"
+      WindowCloseButtonStyle="{StaticResource MetroWindowButtonStyle}"
+      VerticalAlignment="Top" 
+      SaveWindowPosition="True" 
+      EnableDWMDropShadow="True" 
+      GlowBrush="{DynamicResource AccentColorBrush}" 
+      WindowTransitionsEnabled="False" 
+      WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid Grid.Column="0"> 
+            <ContentControl regions:RegionManager.RegionName="ControlsRegions"/>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <ContentControl regions:RegionManager.RegionName="ContentsRegions"/>
+        </Grid>
+
+    </Grid>
+</controls:MetroWindow>
